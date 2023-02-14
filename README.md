@@ -18,7 +18,7 @@ Microservice that receives and returns a given country's Currency Exchange Rate 
 Example Call
 
 ```
-const response = await fetch(`http://localhost:3000/currency?code=${countryCode}`);
+const response = await fetch(`http://localhost:8000?code=${countryCode}`);
 const data = await response.json();
 if (response.status === 200){
     exchangeDisplay.innerHTML = `EXCHANGE RATE OF DOLLARS TO ${countryCode}: ${data.exchange_rate}`;
@@ -26,7 +26,7 @@ if (response.status === 200){
 }
 ```
 
-In this example, from the video, I am using the "localhost:3000/currency" endpoint as a proxy for the "localhost:8000/" endpoint (where the microservice application is running)
+In the example from the video, I used the "localhost:3000/currency" endpoint as a proxy for the "localhost:8000/" endpoint (where the microservice application is running)
 
 ## How to receive data
 
